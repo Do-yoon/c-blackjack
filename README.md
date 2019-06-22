@@ -1,33 +1,3 @@
-<헤더 및 소스파일, 입출력 파일>
-*header
-[server.h]
-#include<stdio.h>
-#include<sys/socket.h>
-typedef struct user {
-	char name[20];
-	char card[26];
-	int cardcount;
-	int money;
-	int recent_access_date;
-	int win;
-	int lose;
-} user;
-
-void get_betting(user*);
-void deal_cards(user*);
-int is_blackjack(user);
-void hit(user*);
-void stand(user*);
-int check_sum_user(user);
-int check_sum_dealer();
-void burst(user*);
-void get_result();
-void print_result();
-void pay_dividend(int sock, user*);
-void notice_card_state();
-void notice_money();
-
-
 *file
 [user] : directory
 <username>.statics
